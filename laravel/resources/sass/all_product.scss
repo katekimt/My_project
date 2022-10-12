@@ -1,0 +1,8 @@
+.product{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    &__card{
+        margin: 30px 10px;
+    }
+}

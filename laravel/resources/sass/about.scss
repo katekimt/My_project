@@ -1,0 +1,32 @@
+.container__slider {
+    width: 600px;
+    height: 400px;
+}
+
+.container__photo {
+    margin-top: 300px;
+}
+
+.about__title {
+    @include font($lora, 30px, 700, $newsTitle);
+    padding: 50px 0;
+    text-align: center;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.text__stile{
+    padding: 60px 0;
+    @include font($lora, 18px, 400, $newsTitle);
+    text-align: justify;
+}
+.text__part{
+    padding-bottom: 30px;
+}
+
+.about__download{
+    margin-bottom: 30px;
+    text-align: center;
+}
