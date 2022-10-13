@@ -8,11 +8,17 @@
                 <i class="nav-icon far fa-calendar-alt"></i>
                 <p>
                     Додати товар
-                    <span class="badge badge-info right">2</span>
                 </p>
             </a>
         </li>
-
+        <li class="nav-item">
+            <a href="{{route('user.registration')}}" class="nav-link">
+                <i class="nav-icon far fa-image"></i>
+                <p>
+                    Реєстрація
+                </p>
+            </a>
+        </li>
 
     </ul>
 </nav>

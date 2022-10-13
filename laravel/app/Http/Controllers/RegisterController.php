@@ -14,7 +14,7 @@ class RegisterController extends Controller
     public function save(Request $request)
     {
         if (Auth::check()) {
-            return redirect()->to(route('user.private'));
+            return redirect()->to(route('admin.product'));
         }
 
         $validateFields = $request->validate([
@@ -32,7 +32,7 @@ class RegisterController extends Controller
 
         if ($user) {
             Auth::login($user);
-            return redirect()->to(route('user.private'));
+            return redirect()->to(route('admin.product'));
         }
 
         return redirect(route('user.login'))->withErrors([
