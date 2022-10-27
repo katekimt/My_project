@@ -7,7 +7,7 @@
             <a href="{{route('admin.addProduct')}}" class="nav-link">
                 <i class="nav-icon far fa-calendar-alt"></i>
                 <p>
-                    Додати товар
+                    Робота з товаром
                 </p>
             </a>
         </li>

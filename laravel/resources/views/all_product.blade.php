@@ -41,7 +41,6 @@
             </ul>
             <form class="d-flex" role="search">
                 <a type="button" class="btn btn-outline-dark nav__padding" href="{{route('user.login')}}">Log in</a>
-                <a type="button" class="btn btn-outline-dark" href="{{route('user.registration')}}">Register</a>
             </form>
         </div>
     </div>
@@ -55,7 +54,10 @@
             <div class="card-body">
                 <h5 class="card-title">{{$element->name}}</h5>
                 <p class="card-text">Код товару: {{$element->code}}</p>
-                <a type="button" class="btn btn-outline-dark" href="{{route('request')}}">Замовити</a>
+                @isset($element->image)
+                <img src="{{ asset('/storage/' . $element->image) }}" class="card-img-top rounded" alt="fff">
+                @endisset
+                <a type="button" class="btn btn-outline-dark product__button" href="{{route('request')}}">Замовити</a>
             </div>
         </div>
         @endforeach

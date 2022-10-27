@@ -42,7 +42,6 @@
             </ul>
             <form class="d-flex" role="search">
                 <a type="button" class="btn btn-outline-dark nav__padding" href="{{route('user.login')}}">Log in</a>
-                <a type="button" class="btn btn-outline-dark" href="{{route('user.registration')}}">Register</a>
             </form>
         </div>
     </div>
@@ -58,26 +57,17 @@
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card">
-                <img src="{{ asset('/img/news/img1.jpeg') }}" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Електротехнічна продукція</h5>
-                </div>
+                <img src="{{ asset('/img/aboutUs/11.png') }}" class="card-img-top" alt="">
             </div>
         </div>
         <div class="col">
             <div class="card">
-                <img src="{{ asset('/img/news/img1.jpeg') }}" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Кабельно-провідникова продукція</h5>
-                </div>
+                <img src="{{ asset('/img/aboutUs/22.png') }}" class="card-img-top" alt="">
             </div>
         </div>
         <div class="col">
             <div class="card">
-                <img src="{{ asset('/img/news/img3.jpeg') }}" class="card-img-top" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Світлотехнічна продукція</h5>
-                </div>
+                <img src="{{ asset('/img/aboutUs/33.png') }}" class="card-img-top" alt="">
             </div>
         </div>
     </div>

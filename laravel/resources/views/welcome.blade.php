@@ -40,11 +40,13 @@
             </ul>
             <form class="d-flex" role="search">
                 <a type="button" class="btn btn-outline-dark nav__padding" href="{{route('user.login')}}">Log in</a>
-                <a type="button" class="btn btn-outline-dark" href="{{route('user.registration')}}">Register</a>
+
             </form>
         </div>
     </div>
 </nav>
+
+
 
 <section class="home__banner ">
 

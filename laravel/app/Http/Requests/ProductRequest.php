@@ -24,8 +24,10 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'nullable',
-            'code' => 'nullable',
+            'old_code' => 'nullable|string',
+            'name' => 'required|string',
+            'code' => 'required|string',
+            'image'=>'mimes:jpeg,gif,png|required',
         ];
     }
 }

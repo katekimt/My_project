@@ -76,5 +76,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function (){
             return view('admin.product.add_product');
         })->name('admin.addProduct');
         Route::post('/product/add', [ProductController::class,'addData'])->name('admin.addProductForm');
+        Route::post('/product/update', [ProductController::class,'update'])->name('admin.updateProductForm');
+        Route::post('/product/delete', [ProductController::class,'delete'])->name('admin.deleteProductForm');
     });
 });
