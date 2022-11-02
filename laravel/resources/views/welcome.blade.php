@@ -47,7 +47,6 @@
 </nav>
 
 
-
 <section class="home__banner ">
 
 </section>
@@ -59,42 +58,18 @@
             <a class="main_products__view" href="{{route('all-product')}}">Переглянути все</a>
         </div>
         <div class="main_products__block">
-            <div class="main_products__container">
-                <div class="card main_products__card">
-                    <img src="{{ asset('/img/main_products/автомат.png') }}" class="card-img-top main_products__img" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Провід ПВС, ШВВП, ВВГнгП</p>
+            @for($i = 0; $i < 4; $i++)
+                <div class="main_products__container">
+                    <div class="card main_products__card">
+                        <img src="{{ asset('/storage/' . $data[$i]->image) }}"
+                             class="card-img-top main_products__img" alt="...">
+                        <div class="card-body" style="height: 80px">
+                            <p class="card-text">{{$data[$i]->name}}</p>
+                        </div>
                     </div>
+                    <a type="button" class="btn btn-outline-info" href="{{route('request')}}">Замовити</a>
                 </div>
-                <a type="button" class="btn btn-outline-info" href="{{route('request')}}">Замовити</a>
-            </div>
-            <div class="main_products__container">
-                <div class="card main_products__card">
-                    <img src="{{ asset('/img/main_products/кабель.png') }}" class="card-img-top main_products__img" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Світлодіодна лампочки</p>
-                    </div>
-                </div>
-                <a type="button" class="btn btn-outline-info" href="{{route('request')}}">Замовити</a>
-            </div>
-            <div class="main_products__container">
-                <div class="card main_products__card">
-                    <img src="{{ asset('/img/main_products/лампы.png') }}" class="card-img-top main_products__img" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Вимикачі автоматичні Аско</p>
-                    </div>
-                </div>
-                <a type="button" class="btn btn-outline-info" href="{{route('request')}}">Замовити</a>
-            </div>
-            <div class="main_products__container">
-                <div class="card main_products__card">
-                    <img src="{{ asset('/img/main_products/прожектор.png') }}" class="card-img-top main_products__img" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Світлодіодні прожектори</p>
-                    </div>
-                </div>
-                <a type="button" class="btn btn-outline-info" href="{{route('request')}}">Замовити</a>
-            </div>
+            @endfor
         </div>
     </div>
 </section>

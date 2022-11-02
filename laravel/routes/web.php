@@ -19,9 +19,7 @@ use App\Http\Controllers\Admin\Product\AdminController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [ProductController::class, 'mainProduct'])->name('home');
 
 Route::name('user.')->group(function () {
 
@@ -78,5 +76,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function (){
         Route::post('/product/add', [ProductController::class,'addData'])->name('admin.addProductForm');
         Route::post('/product/update', [ProductController::class,'update'])->name('admin.updateProductForm');
         Route::post('/product/delete', [ProductController::class,'delete'])->name('admin.deleteProductForm');
+        Route::get('/main/product', function (){
+            return view('admin.product.main_products');
+        })->name('admin.mainProduct');
+        Route::post('/main/product/add', [ProductController::class,'addMainProduct'])->name('admin.addMainProductForm');
+        Route::post('/main/product/delete', [ProductController::class,'deleteMainProduct'])->name('admin.deleteMainProductForm');
     });
 });
