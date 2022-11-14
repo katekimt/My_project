@@ -5,6 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     @vite(['resources/js/app.js'])
     <title>Requests</title>
 </head>
@@ -19,23 +22,23 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
+                <li class="nav-item main_font">
                     <a class="nav-link active" aria-current="page" href="/">Головна сторінка</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('contact')}}">Контакти</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('all-product')}}">Наша продукція</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('about-us')}}">Про нас</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('request')}}">Залишити заявку</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form class="d-flex main_font" role="search">
                 <a type="button" class="btn btn-outline-dark nav__padding" href="{{route('user.login')}}">Log in</a>
             </form>
         </div>
@@ -53,50 +56,50 @@
 @endif
 
 <section class="container request request__container">
-    <h1 class="request request__title request__container">Щоб ми могли зв'язатися з вами, будь ласка, заповніть форму</h1>
+    <h1 class="request request__title request__container main_font">Щоб ми могли зв'язатися з вами, будь ласка, заповніть форму</h1>
     <form action="{{route('request-form')}}" method="post" class="request__container">
         @csrf
         <div class="mb-3">
-            <label for="formGroupExampleInput" class="form-label request__label">Введіть своє ім'я</label>
+            <label for="formGroupExampleInput" class="form-label request__label main_font">Введіть своє ім'я</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ім'я" name="name">
         </div>
         <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label request__label">Введіть свій телефон, щоб ми могли зв'язатися з
+            <label for="formGroupExampleInput2" class="form-label request__label main_font">Введіть свій телефон, щоб ми могли зв'язатися з
                 вами</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Телефон" name="phone">
         </div>
         <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label request__label">Введіть свою пошту, якщо вам зручно спілкуватися за
+            <label for="formGroupExampleInput2" class="form-label request__label main_font">Введіть свою пошту, якщо вам зручно спілкуватися за
                 допомогою неї</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Пошта" name="email">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label request__label">Що б ви хотіли замовити або які маєте
+            <label for="exampleFormControlTextarea1" class="form-label request__label main_font">Що б ви хотіли замовити або які маєте
                 запитання?</label>
             <input type="text" class="form-control" id="exampleFormControlTextarea1" name="information"></input>
         </div>
-        <div class="request__label">Який спосіб звʼязку буде зручним?</div>
+        <div class="request__label main_font">Який спосіб звʼязку буде зручним?</div>
         <div class="form-check form-switch">
             <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckDefault" name="byPhone"
                    value="1">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Дзвінок</label>
+            <label class="form-check-label main_font" for="flexSwitchCheckDefault">Дзвінок</label>
         </div>
         <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" name="byEmail"
                    value="1">
-            <label class="form-check-label" for="flexSwitchCheckChecked">Пошта</label>
+            <label class="form-check-label main_font" for="flexSwitchCheckChecked">Пошта</label>
         </div>
         <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" name="byViber"
                    value="1">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Viber</label>
+            <label class="form-check-label main_font" for="flexSwitchCheckDefault">Viber</label>
         </div>
         <div class="form-check form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" name="byTelegram"
                    value="1">
-            <label class="form-check-label" for="flexSwitchCheckChecked">Telegram</label>
+            <label class="form-check-label main_font" for="flexSwitchCheckChecked">Telegram</label>
         </div>
-        <button type="submit" class="btn btn-outline-dark request__btn">Відправити інформацію</button>
+        <button type="submit" class="btn btn-outline-dark request__btn main_font">Відправити інформацію</button>
     </form>
 </section>
 

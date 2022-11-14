@@ -6,8 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/js/app.js'])
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap"
-          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
     <script async src="bootstrap/js/bootstrap.bundle.js"></script>
     <script src="https://kit.fontawesome.com/72e39ab0de.js" crossorigin="anonymous"></script>
     <title>All product</title>
@@ -23,23 +24,23 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
+                <li class="nav-item main_font">
                     <a class="nav-link active" aria-current="page" href="/">Головна сторінка</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('contact')}}">Контакти</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('all-product')}}">Наша продукція</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('about-us')}}">Про нас</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('request')}}">Залишити заявку</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form class="d-flex main_font" role="search">
                 <a type="button" class="btn btn-outline-dark nav__padding" href="{{route('user.login')}}">Log in</a>
             </form>
         </div>
@@ -52,18 +53,18 @@
         @foreach($data as $element)
         <div class="card product__card">
             <div class="card-body">
-                <h5 class="card-title">{{$element->name}}</h5>
-                <p class="card-text">Код товару: {{$element->code}}</p>
+                <h5 class="card-title main_font">{{$element->name}}</h5>
+                <p class="card-text main_font">Код товару: {{$element->code}}</p>
                 @isset($element->image)
                 <img src="{{ asset('/storage/' . $element->image) }}" class="card-img-top rounded" alt="fff">
                 @endisset
-                <a type="button" class="btn btn-outline-dark product__button" href="{{route('request')}}">Замовити</a>
+                <a type="button" class="btn btn-outline-dark product__button main_font" href="{{route('request')}}">Замовити</a>
             </div>
         </div>
         @endforeach
 
     </div>
-    <div class="pagination">
+    <div class="pagination main_font">
         {{$data->links()}}
     </div>
 </section>

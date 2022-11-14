@@ -31,11 +31,11 @@
     }
 
     &__title {
-        @include font($lora, 30px, 700, $newsTitle);
+        @include font('Raleway', 30px, 700, $newsTitle);
     }
 
     &__view {
-        @include font($lora, 14px, 700, $newsTitle);
+        @include font('Raleway', 14px, 700, $newsTitle);
         text-decoration: none;
         margin-right: 40px;
         margin-top: 26px ;
@@ -86,12 +86,12 @@
 
         a {
             text-decoration: none;
-            @include font($lora, 18px, 700, $newsTitle);
+            @include font('Raleway', 18px, 700, $newsTitle);
         }
     }
 
     &__text {
-        @include font($lora, 12px, 400, $borderColor3);
+        @include font('Raleway', 12px, 400, $borderColor3);
         max-width: 310px;
         margin-top: 15px;
         line-height: 25px;
@@ -100,7 +100,7 @@
 
 .footer {
     background-color: $regMainColor;
-    @include font($lora, 12px, 400, $borderColor1);
+    @include font('Raleway', 12px, 400, $borderColor1);
 
 
     &__container {
@@ -111,12 +111,12 @@
 
     &__sub {
         background-color: $btn2Color;
-        @include font($lora, 14px, 700, $borderColor1);
+        @include font('Raleway', 14px, 700, $borderColor1);
         padding: 31px 0 31px 60px;
     }
 
     &__title {
-        @include font($lora, 18px, 700, $white);
+        @include font('Raleway', 18px, 700, $white);
         line-height: 25px;
         margin-bottom: 16px;
     }
@@ -124,7 +124,7 @@
     &__email,
     &__tel, &__link, &__line, &__address {
         text-decoration: none;
-        @include font($lora, 14px, 400, $borderColor1);
+        @include font('Raleway', 14px, 400, $borderColor1);
         line-height: 30px;
     }
 
