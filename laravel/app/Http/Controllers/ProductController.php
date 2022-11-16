@@ -73,4 +73,14 @@ class ProductController extends Controller
         return redirect()->route('admin.addProduct');
     }
 
+    public function deleteOneMainProduct($id){
+        DB::table('products')->where('id', $id)->update(['main_product' => false]);
+        return redirect()->route('admin.mainProduct');
+    }
+
+    public function getMainProduct(){
+        $data = DB::table('products')->where('main_product', true)->get();
+        return view('admin.product.main_products', compact('data'));
+    }
+
 }

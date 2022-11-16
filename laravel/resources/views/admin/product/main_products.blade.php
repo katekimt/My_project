@@ -18,7 +18,24 @@
                 <input type="text" class="form-control" placeholder="Код товару" name="code" id="code">
             </div>
         </div>
-        <button type="submit" class="btn btn-outline-primary" style="margin-top: 30px">Додати товар</button>
+        <button type="submit" class="btn btn-outline-primary" style="margin: 30px 0">Додати товар</button>
     </form>
-    <hr>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Назва товару</th>
+            <th scope="col">Код товару</th>
+            <th scope="col">Видалити з головних товарів</th>
+        </tr>
+        </thead>
+        <tbody class="table-group-divider">
+        @foreach($data as $element)
+        <tr>
+            <th scope="row">{{$element->name}}</th>
+            <td>{{$element->code}}</td>
+            <td><a class="far fa-trash-alt" href="{{route('admin.deleteOneMainProductForm', $element->id)}}" ></a></td>
+        </tr>
+        @endforeach
+        </tbody>
+    </table>
 @endsection

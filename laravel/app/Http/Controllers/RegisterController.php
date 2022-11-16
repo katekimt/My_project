@@ -19,7 +19,7 @@ class RegisterController extends Controller
 
         $validateFields = $request->validate([
             'email' => 'required|email',
-            'password' => [Password::min(8)->mixedCase()->numbers()],
+            'password' => ['nullable', 'confirmed', 'string', 'min:6', 'regex:/[a-z]/', 'regex:/[A-Z]/', 'regex:/[0-9]/',],
         ]);
 
         if (User::where('email', $validateFields['email'])->exists()) {

@@ -29,7 +29,6 @@
             <div class="alert alert-danger">{{$message}}</div>
             @enderror
         </div>
-
         <button type="submit" class="btn btn-outline-info login__pad">Зареєструватися</button>
     </form>
 </section>

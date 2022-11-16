@@ -49,6 +49,7 @@ Route::name('user.')->group(function () {
 Route::get('/request',function (){
     return view('request');
 })->name('request');
+
 Route::post('/request/submit', [RequestController::class,'submit'])->name('request-form');
 
 Route::get('/contact',function (){
@@ -62,12 +63,7 @@ Route::get('/about',function (){
 
 Route::get('/all/product', [ProductController::class, 'allData'])->name('all-product');
 
-Route::get('/admin' ,function (){
-    return view('admin');
-})->name('admin');
-
-
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function (){
+Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware'=>'auth'], function (){
     Route::group(['namespace' => 'Product'], function (){
         Route::get('/product', [AdminController::class, 'index'])->name('admin.product');
         Route::get('/product/add', function (){
@@ -76,10 +72,12 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function (){
         Route::post('/product/add', [ProductController::class,'addData'])->name('admin.addProductForm');
         Route::post('/product/update', [ProductController::class,'update'])->name('admin.updateProductForm');
         Route::post('/product/delete', [ProductController::class,'delete'])->name('admin.deleteProductForm');
-        Route::get('/main/product', function (){
-            return view('admin.product.main_products');
-        })->name('admin.mainProduct');
+        Route::get('/main/product', [ProductController::class, 'getMainProduct'])->name('admin.mainProduct');
         Route::post('/main/product/add', [ProductController::class,'addMainProduct'])->name('admin.addMainProductForm');
         Route::post('/main/product/delete', [ProductController::class,'deleteMainProduct'])->name('admin.deleteMainProductForm');
+        Route::get('/order/get', [AdminController::class, 'getOrders'])->name('admin.getOrder');
+        Route::post('/order/delete/all',[AdminController::class, 'deleteAll'])->name('admin.deleteOrders');
+        Route::get('/order/delete/{id}',[AdminController::class, 'deleteOne'])->name('admin.deleteOneOrders');
+        Route::get('/main/product/delete/{id}',[ProductController::class, 'deleteOneMainProduct'])->name('admin.deleteOneMainProductForm');
     });
 });

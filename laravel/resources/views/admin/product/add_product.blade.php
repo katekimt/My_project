@@ -21,7 +21,10 @@
                 <input type="text" class="form-control" placeholder="Код товару" name="code" id="code">
             </div>
             <div class="col">
-                <input type="file" name="image" placeholder="Download file" id="image" class="form-control">
+                <div class="custom-file">
+                    <input type="file" name="image" placeholder="Download file" id="image" class="custom-file-input">
+                    <label class="custom-file-label" for="customFile">Download file</label>
+                </div>
             </div>
         </div>
         <button type="submit" class="btn btn-outline-primary" style="margin-top: 30px">Додати товар</button>
@@ -54,10 +57,13 @@
                 <input type="text" class="form-control" placeholder="Код товару" name="code" id="code">
             </div>
             <div class="col">
-                <input type="file" name="image" placeholder="Download file" id="image" class="form-control">
+                <div class="custom-file">
+                    <input type="file" name="image" placeholder="Download file" id="image" class="custom-file-input">
+                    <label class="custom-file-label" for="customFile">Download file</label>
+                </div>
             </div>
         </div>
-        <button type="submit" class="btn btn-outline-primary" style="margin-top: 30px">Обновити товар</button>
+        <button type="submit" class="btn btn-outline-primary" style="margin-top: 30px">Оновити товар</button>
     </form>
     <hr>
     <h4 style="margin: 20px 0">Форма для видалення товару</h4>
