@@ -16,7 +16,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg bg-light nav_container">
-    <div class="container-fluid">
+    <div class="container-fluid" style="font-family: 'Raleway'">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,12 +49,13 @@
 </nav>
 
 
-<section class="container">
-    <form class="d-flex  product__search" role="search">
-        <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search">
+<section class="container" >
+    <form class="d-flex  product__search" role="search" action="{{route('search-product')}}" method="post" style="font-family: 'Raleway'">
+        @csrf
+        <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search" name="name">
         <button class="btn btn-outline-dark" type="submit">Пошук</button>
     </form>
-    <div class="product">
+    <div class="product" style="font-family: 'Raleway'">
         @foreach($data as $element)
         <div class="card product__card">
             <div class="card-body">
@@ -67,7 +68,6 @@
             <a type="button" class="btn btn-outline-dark product__button main_font" href="{{route('request')}}">Замовити</a>
         </div>
         @endforeach
-
     </div>
     <div class="pagination main_font">
         {{$data->links()}}
@@ -92,11 +92,9 @@
             <div class="footer__block">
                 <div class="footer__title">Зв'язок з нами</div>
                 <div class="footer__link">
-                    <a class="footer__link" href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-pinterest"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-behance-square"></i></a>
+                    <a class="footer__link"
+                       href="https://www.google.com/maps?q=%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%A5%D1%96%D0%BC%D1%96%D0%BA%D1%96%D0%B2,+1,+%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D0%B8,+%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+18000&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjwvsH3n7X7AhX7_7sIHfw4DHkQ_AUoAXoECAIQAw">Наша
+                        локація : <i class="fa-sharp fa-solid fa-location-dot"></i></a>
                 </div>
             </div>
         </div>

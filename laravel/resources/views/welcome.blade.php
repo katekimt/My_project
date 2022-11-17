@@ -23,24 +23,25 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px; ">
-                <li class="nav-item main_font">
-                    <a class="nav-link active" aria-current="page" href="/" style="font-family: 'Raleway'">Головна сторінка</a>
+                <li class="nav-item" style="font-family: 'Raleway'">
+                    <a class="nav-link active" aria-current="page" href="/">Головна сторінка</a>
                 </li>
-                <li class="nav-item main_font" >
-                    <a class="nav-link" href="{{route('contact')}}" >Контакти</a>
+                <li class="nav-item" style="font-family: 'Raleway'">
+                    <a class="nav-link" href="{{route('contact')}}">Контакти</a>
                 </li>
-                <li class="nav-item main_font">
+                <li class="nav-item " style="font-family: 'Raleway'">
                     <a class="nav-link" href="{{route('all-product')}}">Наша продукція</a>
                 </li>
-                <li class="nav-item main_font">
+                <li class="nav-item " style="font-family: 'Raleway'">
                     <a class="nav-link" href="{{route('about-us')}}">Про нас</a>
                 </li>
-                <li class="nav-item main_font">
+                <li class="nav-item " style="font-family: 'Raleway'">
                     <a class="nav-link" href="{{route('request')}}">Залишити заявку</a>
                 </li>
             </ul>
             <form class="d-flex main_font" role="search">
-                <a type="button" class="btn btn-outline-dark nav__padding main_font" href="{{route('user.login')}}">Log in</a>
+                <a type="button" class="btn btn-outline-dark nav__padding " style="font-family: 'Raleway'"
+                   href="{{route('user.login')}}">Log in</a>
 
             </form>
         </div>
@@ -58,17 +59,18 @@
             <div class="main_products__title">Найпопулярніша продукція</div>
             <a class="main_products__view" href="{{route('all-product')}}">Переглянути все</a>
         </div>
-        <div class="main_products__block">
+        <div class="main_products__block" style="font-family: 'Raleway'">
             @for($i = 0; $i < 4; $i++)
                 <div class="main_products__container">
                     <div class="card main_products__card">
                         <img src="{{ asset('/storage/' . $data[$i]->image) }}"
                              class="card-img-top main_products__img" alt="...">
-                        <div class="card-body" style="height: 80px">
-                            <p class="card-text main_font">{{$data[$i]->name}}</p>
+                        <div class="card-body" style=" height: 80px">
+                            <p class="card-text main_font" style="text-align: center">{{$data[$i]->name}}</p>
                         </div>
                     </div>
-                    <a type="button" class="btn btn-outline-info main_font" href="{{route('request')}}">Замовити</a>
+                    <a type="button" class="btn btn-outline-info" style="font-family: 'Raleway'"
+                       href="{{route('request')}}">Замовити</a>
                 </div>
             @endfor
         </div>
@@ -91,13 +93,11 @@
                 </div>
             </div>
             <div class="footer__block">
-                <div class="footer__title">Зв'язок з нами</div>
+                <div class="footer__title">Наша геолокація</div>
                 <div class="footer__link">
-                    <a class="footer__link" href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-pinterest"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-behance-square"></i></a>
+                    <a class="footer__link"
+                       href="https://www.google.com/maps?q=%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%A5%D1%96%D0%BC%D1%96%D0%BA%D1%96%D0%B2,+1,+%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D0%B8,+%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+18000&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjwvsH3n7X7AhX7_7sIHfw4DHkQ_AUoAXoECAIQAw">Наша
+                        локація : <i class="fa-sharp fa-solid fa-location-dot"></i></a>
                 </div>
             </div>
         </div>

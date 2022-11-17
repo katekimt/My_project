@@ -62,6 +62,8 @@ Route::get('/about',function (){
 })->name('about-us');
 
 Route::get('/all/product', [ProductController::class, 'allData'])->name('all-product');
+Route::post('/product/search', [ProductController::class, 'search'])->name('search-product');
+
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware'=>'auth'], function (){
     Route::group(['namespace' => 'Product'], function (){
@@ -79,5 +81,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'middleware'=>'auth']
         Route::post('/order/delete/all',[AdminController::class, 'deleteAll'])->name('admin.deleteOrders');
         Route::get('/order/delete/{id}',[AdminController::class, 'deleteOne'])->name('admin.deleteOneOrders');
         Route::get('/main/product/delete/{id}',[ProductController::class, 'deleteOneMainProduct'])->name('admin.deleteOneMainProductForm');
+
     });
 });

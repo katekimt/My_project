@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/72e39ab0de.js" crossorigin="anonymous"></script>
     @vite(['resources/js/app.js'])
     <title>Requests</title>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg bg-light nav_container">
-    <div class="container-fluid">
+    <div class="container-fluid" style="font-family: 'Raleway'">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,25 +57,29 @@
 @endif
 
 <section class="container request request__container">
-    <h1 class="request request__title request__container main_font">Щоб ми могли зв'язатися з вами, будь ласка, заповніть форму</h1>
-    <form action="{{route('request-form')}}" method="post" class="request__container">
+    <h1 class="request request__title request__container" style="font-family: 'Raleway'">Щоб ми могли зв'язатися з вами,
+        будь ласка, заповніть форму</h1>
+    <form action="{{route('request-form')}}" method="post" class="request__container" style="font-family: 'Raleway'">
         @csrf
         <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label request__label main_font">Введіть своє ім'я</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Ім'я" name="name">
         </div>
         <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label request__label main_font">Введіть свій телефон, щоб ми могли зв'язатися з
+            <label for="formGroupExampleInput2" class="form-label request__label main_font">Введіть свій телефон, щоб ми
+                могли зв'язатися з
                 вами</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Телефон" name="phone">
         </div>
         <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label request__label main_font">Введіть свою пошту, якщо вам зручно спілкуватися за
+            <label for="formGroupExampleInput2" class="form-label request__label main_font">Введіть свою пошту, якщо вам
+                зручно спілкуватися за
                 допомогою неї</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Пошта" name="email">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label request__label main_font">Що б ви хотіли замовити або які маєте
+            <label for="exampleFormControlTextarea1" class="form-label request__label main_font">Що б ви хотіли замовити
+                або які маєте
                 запитання?</label>
             <input type="text" class="form-control" id="exampleFormControlTextarea1" name="information"></input>
         </div>
@@ -122,11 +127,9 @@
             <div class="footer__block">
                 <div class="footer__title">Зв'язок з нами</div>
                 <div class="footer__link">
-                    <a class="footer__link" href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-pinterest"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-behance-square"></i></a>
+                    <a class="footer__link"
+                       href="https://www.google.com/maps?q=%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%A5%D1%96%D0%BC%D1%96%D0%BA%D1%96%D0%B2,+1,+%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D0%B8,+%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+18000&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjwvsH3n7X7AhX7_7sIHfw4DHkQ_AUoAXoECAIQAw">Наша
+                        локація : <i class="fa-sharp fa-solid fa-location-dot"></i></a>
                 </div>
             </div>
         </div>

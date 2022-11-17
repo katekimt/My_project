@@ -22,7 +22,7 @@
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
+        <div class="collapse navbar-collapse" id="navbarScroll" style="font-family: 'Raleway'">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
                 <li class="nav-item main_font">
                     <a class="nav-link active" aria-current="page" href="/">Головна сторінка</a>
@@ -88,11 +88,9 @@
             <div class="footer__block">
                 <div class="footer__title">Зв'язок з нами</div>
                 <div class="footer__link">
-                    <a class="footer__link" href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-pinterest"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-behance-square"></i></a>
+                    <a class="footer__link"
+                       href="https://www.google.com/maps?q=%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%A5%D1%96%D0%BC%D1%96%D0%BA%D1%96%D0%B2,+1,+%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D0%B8,+%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+18000&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjwvsH3n7X7AhX7_7sIHfw4DHkQ_AUoAXoECAIQAw">Наша
+                        локація : <i class="fa-sharp fa-solid fa-location-dot"></i></a>
                 </div>
             </div>
         </div>

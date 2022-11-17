@@ -16,7 +16,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg bg-light nav_container">
-    <div class="container-fluid">
+    <div class="container-fluid" style="font-family: 'Raleway'">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
                 aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +49,7 @@
 </nav>
 
 <section class="container">
-    <h1 class="about__title">Підприємство «КабельЕлектроТехніка»</h1>
+    <h1 class="about__title" style="font-family: 'Raleway'">Підприємство «КабельЕлектроТехніка»</h1>
 </section>
 
 
@@ -75,9 +75,8 @@
 </section>
 
 
-
 <section class="container text__about">
-    <div class="text__stile">
+    <div class="text__stile" style="font-family: 'Raleway'">
         <div class="text__part">Підприємство «КабельЕлектроТехніка» зареєстровано 01.03.2004 р. та понад 10 років працює
             на ринку України.
         </div>
@@ -125,10 +124,13 @@
         </div>
 
         <div class="text__part"> Наявність власної транспортно-технічної бази дозволяє за бажанням клієнта організувати
-            доставку товару до зазначеного пункту призначення. Вашу заявку ми готові прийняти у будь-якому зручному для Вас вигляді та форматі
-            даних. Ми здійснюємо продаж у будь-яких кількостях. Сподіваємось на плідну співпрацю.</div>
+            доставку товару до зазначеного пункту призначення. Вашу заявку ми готові прийняти у будь-якому зручному для
+            Вас вигляді та форматі
+            даних. Ми здійснюємо продаж у будь-яких кількостях. Сподіваємось на плідну співпрацю.
+        </div>
 
-        <a type="button about__download main_font" class="btn btn-outline-secondary" href="{{ asset('/files/file.doc') }}" download>Детальна інформація про компанію</a>
+        <a type="button about__download main_font" class="btn btn-outline-secondary"
+           href="{{ asset('/files/file.doc') }}" download>Детальна інформація про компанію</a>
     </div>
 
 </section>
@@ -151,11 +153,9 @@
             <div class="footer__block">
                 <div class="footer__title">Зв'язок з нами</div>
                 <div class="footer__link">
-                    <a class="footer__link" href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-youtube"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-pinterest"></i></a>
-                    <a class="footer__link" href="#"><i class="fa-brands fa-behance-square"></i></a>
+                    <a class="footer__link"
+                       href="https://www.google.com/maps?q=%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82+%D0%A5%D1%96%D0%BC%D1%96%D0%BA%D1%96%D0%B2,+1,+%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D0%B8,+%D0%A7%D0%B5%D1%80%D0%BA%D0%B0%D1%81%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+18000&um=1&ie=UTF-8&sa=X&ved=2ahUKEwjwvsH3n7X7AhX7_7sIHfw4DHkQ_AUoAXoECAIQAw">Наша
+                        локація : <i class="fa-sharp fa-solid fa-location-dot"></i></a>
                 </div>
             </div>
         </div>
