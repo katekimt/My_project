@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" conte
+          nt="ie=edge">
     @vite(['resources/js/app.js'])
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/72e39ab0de.js" crossorigin="anonymous"></script>
+
     <title>Home page</title>
 </head>
 <body>
@@ -29,8 +31,14 @@
                 <li class="nav-item" style="font-family: 'Raleway'">
                     <a class="nav-link" href="{{route('contact')}}">Контакти</a>
                 </li>
-                <li class="nav-item " style="font-family: 'Raleway'">
-                    <a class="nav-link" href="{{route('all-product')}}">Наша продукція</a>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="{{route('all-product')}}" role="button" data-bs-toggle="dropdown" >
+                        Наша продукція
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('all-product')}}">Уся продукція</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item " style="font-family: 'Raleway'">
                     <a class="nav-link" href="{{route('about-us')}}">Про нас</a>

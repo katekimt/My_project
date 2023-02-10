@@ -30,16 +30,22 @@
                 <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('contact')}}">Контакти</a>
                 </li>
-                <li class="nav-item main_font">
-                    <a class="nav-link" href="{{route('all-product')}}">Наша продукція</a>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="{{route('all-product')}}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Наша продукція
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                    </ul>
                 </li>
-
                 <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('about-us')}}">Про нас</a>
                 </li>
                 <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('request')}}">Залишити заявку</a>
                 </li>
+
             </ul>
             <form class="d-flex main_font" role="search">
                 <a type="button" class="btn btn-outline-dark nav__padding" href="{{route('user.login')}}">Log in</a>
@@ -48,13 +54,8 @@
     </div>
 </nav>
 
-<section class="container">
-    <h1 class="about__title" style="font-family: 'Raleway'">Підприємство «КабельЕлектроТехніка»</h1>
-</section>
-
-
 <section class="container container__photo">
-
+    <h1 class="about__title" style="font-family: 'Raleway'">Підприємство «КабельЕлектроТехніка»</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card">
@@ -73,7 +74,6 @@
         </div>
     </div>
 </section>
-
 
 <section class="container text__about">
     <div class="text__stile" style="font-family: 'Raleway'">
@@ -130,7 +130,7 @@
         </div>
 
         <a type="button about__download main_font" class="btn btn-outline-secondary"
-           href="{{ asset('/files/file.doc') }}" download>Детальна інформація про компанію</a>
+           href="{{ asset('/files/file.doc') }}" download>Детальна інформація про компанію </a>
     </div>
 
 </section>

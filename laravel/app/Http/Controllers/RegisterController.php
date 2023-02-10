@@ -3,11 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\Rules\Password;
 
 class RegisterController extends Controller
 {
@@ -19,12 +16,12 @@ class RegisterController extends Controller
 
         $validateFields = $request->validate([
             'email' => 'required|email',
-            'password' => ['nullable', 'confirmed', 'string', 'min:6', 'regex:/[a-z]/', 'regex:/[A-Z]/', 'regex:/[0-9]/',],
+            'password' => ['nullable', 'confirmed', 'string', 'min:6', 'regex:/[a-z]/', 'regex:/[A-Z]/', 'regex:/[0-9]/'],
         ]);
 
         if (User::where('email', $validateFields['email'])->exists()) {
             return redirect(route('user.registration'))->withErrors([
-                'email' => 'Ця пошта вже зареєстровона'
+                'email' => 'Ця пошта вже зареєстровона',
             ]);
         }
 
@@ -32,12 +29,12 @@ class RegisterController extends Controller
 
         if ($user) {
             Auth::login($user);
+
             return redirect()->to(route('admin.product'));
         }
 
         return redirect(route('user.login'))->withErrors([
-            'fromError' => 'Помилка при збережені користувача'
+            'fromError' => 'Помилка при збережені користувача',
         ]);
     }
-
 }

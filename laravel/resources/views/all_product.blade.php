@@ -30,8 +30,15 @@
                 <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('contact')}}">Контакти</a>
                 </li>
-                <li class="nav-item main_font">
-                    <a class="nav-link" href="{{route('all-product')}}">Наша продукція</a>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="{{route('all-product')}}" role="button"
+                       data-bs-toggle="dropdown">
+                        Наша продукція
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('all-product')}}">Уся продукція</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('about-us')}}">Про нас</a>
@@ -49,24 +56,26 @@
 </nav>
 
 
-<section class="container" >
-    <form class="d-flex  product__search" role="search" action="{{route('search-product')}}" method="post" style="font-family: 'Raleway'">
+<section class="container">
+    <form class="d-flex  product__search" role="search" action="{{route('search-product')}}" method="post"
+          style="font-family: 'Raleway'">
         @csrf
         <input class="form-control me-2" type="search" placeholder="Пошук" aria-label="Search" name="name">
         <button class="btn btn-outline-dark" type="submit">Пошук</button>
     </form>
     <div class="product" style="font-family: 'Raleway'">
         @foreach($data as $element)
-        <div class="card product__card">
-            <div class="card-body">
-                <h5 class="card-title main_font">{{$element->name}}</h5>
-                <p class="card-text main_font">Код товару: {{$element->code}}</p>
+            <div class="card product__card">
+                <div class="card-body">
+                    <h5 class="card-title main_font">{{$element->name}}</h5>
+                    <p class="card-text main_font">Код товару: {{$element->code}}</p>
+                </div>
+                @isset($element->image)
+                    <img src="{{ asset('/storage/' . $element->image) }}" class="card-img-top rounded product__image"
+                         alt="fff">
+                @endisset
+                <a type="button" class="btn btn-outline-dark product__button main_font" href="{{route('request')}}">Замовити</a>
             </div>
-            @isset($element->image)
-                <img src="{{ asset('/storage/' . $element->image) }}" class="card-img-top rounded product__image" alt="fff">
-            @endisset
-            <a type="button" class="btn btn-outline-dark product__button main_font" href="{{route('request')}}">Замовити</a>
-        </div>
         @endforeach
     </div>
     <div class="pagination main_font">

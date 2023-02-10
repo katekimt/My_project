@@ -28,10 +28,10 @@ class InformRequest extends FormRequest
             'phone' => 'required|min:10',
             'email' => 'email|nullable',
             'information' => 'nullable',
-            'byPhone'=>'boolean',
-            'byEmail'=>'boolean',
-            'byViber'=>'boolean',
-            'byTelegram'=>'boolean',
+            'byPhone' => 'boolean',
+            'byEmail' => 'boolean',
+            'byViber' => 'boolean',
+            'byTelegram' => 'boolean',
         ];
     }
 

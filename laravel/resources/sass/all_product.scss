@@ -1,22 +1,22 @@
-.product{
+.product {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
-    &__card{
+    &__card {
         margin: 30px 10px 30px 0;
     }
 
-    &__button{
-        margin: 0  20px 20px auto;
+    &__button {
+        margin: 0 20px 20px auto;
         width: 100px;
     }
 
-    &__image{
-        margin: 0 auto  auto auto;
+    &__image {
+        margin: 0 auto auto auto;
         max-width: 300px;
     }
 
-    &__search{
+    &__search {
         margin-top: 10px;
         width: 400px;
     }

@@ -29,8 +29,14 @@
                 <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('contact')}}">Контакти</a>
                 </li>
-                <li class="nav-item main_font">
-                    <a class="nav-link" href="{{route('all-product')}}">Наша продукція</a>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="{{route('all-product')}}" role="button" data-bs-toggle="dropdown" >
+                        Наша продукція
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="{{route('all-product')}}">Уся продукція</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item main_font">
                     <a class="nav-link" href="{{route('about-us')}}">Про нас</a>

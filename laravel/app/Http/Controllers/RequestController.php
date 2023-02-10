@@ -10,6 +10,7 @@ class RequestController extends Controller
     public function submit(InformRequest $request)
     {
         Inform::create($request->validated());
+
         return redirect()->route('home');
     }
 }

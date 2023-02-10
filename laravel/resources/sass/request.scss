@@ -1,19 +1,19 @@
-.request{
+.request {
 
-    &__title{
+    &__title {
         margin: 40px 0 30px 0;
         @include font($lora, 26px, 700, $newsTitle);
     }
 
-    &__label{
+    &__label {
         padding-bottom: 15px;
     }
 
-    &__btn{
+    &__btn {
         margin: 20px 0 60px 0;
     }
 
-    &__container{
+    &__container {
         padding: 0 300px;
     }
 }
